@@ -3,7 +3,9 @@ import time
 import sys
 
 # class
+class Quiz:
     # construct method
+    def __init__(self):
         # question
         # time limit
         # score
