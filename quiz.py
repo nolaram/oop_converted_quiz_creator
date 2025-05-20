@@ -28,6 +28,7 @@ class Quiz:
             print("Thank you for playing!")
             sys.exit()
     # handle display
+    def ask_question(self):
         # show the question
         # display options
         # timer
