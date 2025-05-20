@@ -21,6 +21,12 @@ class Quiz:
         # display results
         self.show_results()
         # ask to retry
+        if self.ask_to_retry():
+            self.score = 0
+            self.start()
+        else:
+            print("Thank you for playing!")
+            sys.exit()
     # handle display
         # show the question
         # display options
