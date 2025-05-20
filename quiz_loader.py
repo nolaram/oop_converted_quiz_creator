@@ -15,5 +15,18 @@ class QuizLoader:
                 # loop through each line
                 for line in file:
                     line = line.strip()
-                    
+
+                    if line.startswith("Question: "):
+                        if current_data:
+                            questions.append(Question(
+                                current_data['question_text'],
+                                current_data['option_a'],
+                                current_data['option_b'],
+                                current_data['option_c'],
+                                current_data['option_d'],
+                                current_data['correct_answer']
+                            ))
+                            current_data = {}
+
+                        current_data["question_text"] = line[len("Question: "):]
     # return questions read
