@@ -48,3 +48,4 @@ class Quiz:
                 return
             
             print(f"Time remaining: {remaining} seconds")
+            user_answer = input("Your answer (a/b/c/d): ").lower().strip()
