@@ -88,6 +88,10 @@ class QuizCreatorApp:
                 confirm_rect = confirm_text.get_rect(center=(self.WIDTH // 2, self.HEIGHT // 2 + 140))
                 self.screen.blit(confirm_text, confirm_rect)
 
+            title_text = self.title_font.render("Quiz Creator", True, self.COLOR_TEXT)
+            title_rect = title_text.get_rect(center=(self.WIDTH // 2, self.HEIGHT - 110))
+            self.screen.blit(title_text, title_rect)
+
             pygame.display.flip()
             self.clock.tick(30)
 
