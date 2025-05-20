@@ -11,6 +11,7 @@ class Quiz:
         # time limit
         self.time_limit = time_limit
         # score
+        self.score = 0
     # main function to start the program
         # loop 
         # display results
