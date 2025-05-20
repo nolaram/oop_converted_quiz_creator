@@ -76,6 +76,11 @@ class QuizCreatorApp:
                             running = False
 
             self.screen.fill(self.COLOR_BACKGROUND)
+
+            for index, box in enumerate(self.input_boxes):
+                box.active = (index == self.active_index)
+                box.draw(self.screen, self.COLOR_ACTIVE, self.COLOR_INACTIVE, self.COLOR_TEXT)
+
             pygame.display.flip()
             self.clock.tick(30)
 
