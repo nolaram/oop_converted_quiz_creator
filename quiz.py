@@ -28,7 +28,10 @@ class Quiz:
             print("Thank you for playing!")
             sys.exit()
     # handle display
-    def ask_question(self):
+    def ask_question(self, number, question):
         # show the question
+        print(f"\nQuestion {number}: {question.question_text}")
+        for key in ['a', 'b', 'c', 'd']:
+            print(f"  {key}) {question.options[key]}")
         # display options
         # timer
