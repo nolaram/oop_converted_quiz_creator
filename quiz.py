@@ -37,3 +37,7 @@ class Quiz:
         # timer
         start_time = time.time()
         user_answer = ""
+
+        while user_answer not in ['a', 'b', 'c', 'd']:
+            elapsed = time.time() - start_time
+            remaining = self.time_limit - int(elapsed)
