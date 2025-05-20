@@ -34,7 +34,7 @@ class QuizCreatorApp:
         ]
         self.inputs = [""] * len(self.labels)
         self.input_boxes = [
-            InputBox(50, 50 + i * 60, 700, 40, self.labels[i], self.font, i)
+            InputBox(50, 50 + i * 60, 700, 50, self.labels[i], self.font, i)
             for i in range(len(self.labels))
         ]
 
