@@ -12,7 +12,6 @@ class QuizCreatorApp:
         self.WIDTH, self.HEIGHT = 800, 600
         self.screen = pygame.display.set_mode((self.WIDTH, self.HEIGHT))
         pygame.display.set_caption('Quiz Creator')
-        self.clock = pygame.time.Clock()
 
         self.font = pygame.font.SysFont("comic sans ms", 28)
         self.confirm_font = pygame.font.SysFont("comic sans ms", 32)
@@ -35,12 +34,13 @@ class QuizCreatorApp:
         ]
         self.inputs = [""] * len(self.labels)
         self.input_boxes = [
-            InputBox((50, 50 + i * 60, 700, 40), self.labels[i])
+            InputBox(50, 50 + i * 60, 700, 40, self.labels[i], self.font, i)
             for i in range(len(self.labels))
         ]
+
         self.active_index = 0
         self.state = "input"
-        self.writer = QuizDataWriter()
+        self.writer = QuizDataWriter("quiz_data.txt")
 
     # run the screen
     def run(self):
