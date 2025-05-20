@@ -29,4 +29,8 @@ class QuizLoader:
                             current_data = {}
 
                         current_data["question_text"] = line[len("Question: "):]
+
+                    elif line.startswith("a) "):
+                        current_data["option_a"] = line[len("a) "):]
+                        
     # return questions read
