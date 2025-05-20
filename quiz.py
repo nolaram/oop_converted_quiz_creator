@@ -62,3 +62,13 @@ class Quiz:
     def show_results(self):
         print("\n=== Quiz Complete ===")
         print(f"Your Score: {self.score} out of {len(self.questions)}")
+
+    def ask_to_retry(self):
+        while True:
+            choice = input("Do you want to take the quiz again? (Y/N): ").strip().lower()
+            if choice == 'y':
+                return True
+            elif choice == 'n':
+                return False
+            else:
+                print("Invalid input. Please enter Y or N.")
