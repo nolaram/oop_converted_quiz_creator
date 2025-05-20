@@ -54,5 +54,7 @@ class QuizLoader:
                         current_data['option_d'],
                         current_data['correct_answer']
                     ))
-                    
-    # return questions read
+        except FileNotFoundError:
+            print(f"Error: File '{file_path}' not found.")
+
+        # return questions read
