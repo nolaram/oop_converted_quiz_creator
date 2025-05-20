@@ -1,4 +1,5 @@
 # import the question file
+from question import Question
 # class
     # load the questions
     # initialize a list
