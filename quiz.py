@@ -41,3 +41,8 @@ class Quiz:
         while user_answer not in ['a', 'b', 'c', 'd']:
             elapsed = time.time() - start_time
             remaining = self.time_limit - int(elapsed)
+
+            if remaining <= 0:
+                print("\nTime's up!")
+                print(f"The correct answer was '{question.correct_answer}'.")
+                return
