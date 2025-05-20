@@ -12,7 +12,9 @@ class Quiz:
         self.time_limit = time_limit
         # score
         self.score = 0
+
     # main function to start the program
+    def start(self):
         # loop 
         # display results
         # ask to retry
