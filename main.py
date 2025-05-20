@@ -81,6 +81,13 @@ class QuizCreatorApp:
                 box.active = (index == self.active_index)
                 box.draw(self.screen, self.COLOR_ACTIVE, self.COLOR_INACTIVE, self.COLOR_TEXT)
 
+            if self.state == "confirm":
+                confirm_rect = pygame.Rect(200, self.HEIGHT // 2 + 120, 400, 60)
+                pygame.draw.rect(self.screen, self.COLOR_INACTIVE, confirm_rect, border_radius=10)
+                confirm_text = self.confirm_font.render("Add another question? (Y/N)", True, self.COLOR_CONFIRM)
+                confirm_rect = confirm_text.get_rect(center=(self.WIDTH // 2, self.HEIGHT // 2 + 140))
+                self.screen.blit(confirm_text, confirm_rect)
+
             pygame.display.flip()
             self.clock.tick(30)
 
