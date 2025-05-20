@@ -23,3 +23,7 @@ class InputBox:
         color = active_color if self.active else inactive_color
         pygame.draw.rect(screen, color, self.rect, 0)
         pygame.draw.rect(screen, pygame.Color("white"), self.rect, 2)
+
+        full_text = f"{self.label}: {self.text}"
+        text_surface = self.font.render(full_text, True, text_color)
+        screen.blit(text_surface, (self.rect.x + 5, self.rect.y + 10))
