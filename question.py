@@ -10,5 +10,7 @@ class Question:
             'd': option_d
         }
         self.correct_answer = correct_answer.lower()
-        
+
     # check if correct
+    def is_correct(self, user_answer):
+        return user_answer == self.correct_answer
