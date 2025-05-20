@@ -44,5 +44,15 @@ class QuizLoader:
 
                     elif line.startswith("Correct Answer: "):
                         current_data["correct_answer"] = line[len("Correct Answer: "):]
-                        
+
+                if current_data:
+                    questions.append(Question(
+                        current_data['question_text'],
+                        current_data['option_a'],
+                        current_data['option_b'],
+                        current_data['option_c'],
+                        current_data['option_d'],
+                        current_data['correct_answer']
+                    ))
+                    
     # return questions read
