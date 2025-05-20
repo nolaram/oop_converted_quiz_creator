@@ -56,3 +56,6 @@ class Quiz:
         if question.is_correct(user_answer):
             print("Correct!")
             self.score += 1
+        else:
+            print(f"Wrong! The correct answer was '{question.correct_answer}'.")
+
