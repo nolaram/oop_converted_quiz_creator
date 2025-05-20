@@ -14,5 +14,7 @@ if __name__ == "__main__":
         print("No questions loaded. Exiting.")
         # exit
         sys.exit()
-        
+
     # start quiz
+    quiz = Quiz(questions)
+    quiz.start()
