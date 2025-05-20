@@ -19,6 +19,7 @@ class Quiz:
         for i, question in enumerate(self.questions, start=1):
             self.ask_question(i, question)
         # display results
+        self.show_results()
         # ask to retry
     # handle display
         # show the question
