@@ -12,5 +12,8 @@ class QuizLoader:
             with open(file_path, 'r', encoding='utf-8') as file:
                 current_data = {}
 
-    # loop through each line
+                # loop through each line
+                for line in file:
+                    line = line.strip()
+                    
     # return questions read
