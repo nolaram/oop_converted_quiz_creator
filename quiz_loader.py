@@ -6,7 +6,11 @@ class QuizLoader:
     # load the questions
     def load_questions_from_file(file_path):
         questions = []
-    # initialize a list
-    # open the file
+
+        try:
+            # open the file
+            with open(file_path, 'r', encoding='utf-8') as file:
+                current_data = {}
+
     # loop through each line
     # return questions read
