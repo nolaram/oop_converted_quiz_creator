@@ -59,3 +59,6 @@ class Quiz:
         else:
             print(f"Wrong! The correct answer was '{question.correct_answer}'.")
 
+    def show_results(self):
+        print("\n=== Quiz Complete ===")
+        print(f"Your Score: {self.score} out of {len(self.questions)}")
