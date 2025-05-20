@@ -49,3 +49,6 @@ class Quiz:
             
             print(f"Time remaining: {remaining} seconds")
             user_answer = input("Your answer (a/b/c/d): ").lower().strip()
+
+            if user_answer not in ['a', 'b', 'c', 'd']:
+                print("Please enter a valid choice: a, b, c, or d")
