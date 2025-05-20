@@ -56,5 +56,7 @@ class QuizLoader:
                     ))
         except FileNotFoundError:
             print(f"Error: File '{file_path}' not found.")
-
+        except Exception as exception:
+            print(f"Unexpected error: {exception}")
+            
         # return questions read
