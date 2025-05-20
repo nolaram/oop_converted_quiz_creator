@@ -8,5 +8,6 @@ class InputBox:
         self.text = ""
         self.font = font
         self.index = index
+        self.active = False
     # method handle event
     # method draw
