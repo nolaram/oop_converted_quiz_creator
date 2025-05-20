@@ -75,7 +75,7 @@ class QuizCreatorApp:
                         elif event.key == pygame.K_n:
                             running = False
 
-            self.screen.fill((0, 0, 0))
+            self.screen.fill(self.COLOR_BACKGROUND)
             pygame.display.flip()
             self.clock.tick(30)
 
