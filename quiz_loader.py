@@ -41,4 +41,8 @@ class QuizLoader:
                     
                     elif line.startswith("d) "):
                         current_data["option_d"] = line[len("d) "):]
+
+                    elif line.startswith("Correct Answer: "):
+                        current_data["correct_answer"] = line[len("Correct Answer: "):]
+                        
     # return questions read
