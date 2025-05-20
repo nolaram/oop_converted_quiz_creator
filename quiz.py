@@ -15,7 +15,9 @@ class Quiz:
 
     # main function to start the program
     def start(self):
-        # loop 
+        # loop
+        for i, question in enumerate(self.questions, start=1):
+            self.ask_question(i, question)
         # display results
         # ask to retry
     # handle display
