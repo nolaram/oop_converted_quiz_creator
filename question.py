@@ -1,4 +1,12 @@
-# class
+class Question:
     # constructor method
+    def __init__(self, question_text, option_a, option_b, option_c, option_d):
+        self.question_text = question_text
         # parameters
+        self.options = {
+            'a': option_a,
+            'b': option_b,
+            'c': option_c,
+            'd': option_d
+        }
     # check if correct
