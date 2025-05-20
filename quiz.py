@@ -33,5 +33,7 @@ class Quiz:
         print(f"\nQuestion {number}: {question.question_text}")
         for key in ['a', 'b', 'c', 'd']:
             print(f"  {key}) {question.options[key]}")
-        # display options
+        
         # timer
+        start_time = time.time()
+        user_answer = ""
