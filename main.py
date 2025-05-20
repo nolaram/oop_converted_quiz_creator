@@ -28,5 +28,8 @@ class QuizCreatorApp:
 
         pygame.quit()
         sys.exit()
-        
+
 # call main
+if __name__ == "__main__":
+    app = QuizCreatorApp()
+    app.run()
