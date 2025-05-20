@@ -5,10 +5,11 @@ import sys
 # class
 class Quiz:
     # construct method
-    def __init__(self, questions):
+    def __init__(self, questions, time_limit=30):
         # question
         self.questions = questions
         # time limit
+        self.time_limit = time_limit
         # score
     # main function to start the program
         # loop 
