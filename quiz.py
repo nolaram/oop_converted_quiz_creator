@@ -5,8 +5,9 @@ import sys
 # class
 class Quiz:
     # construct method
-    def __init__(self):
+    def __init__(self, questions):
         # question
+        self.questions = questions
         # time limit
         # score
     # main function to start the program
