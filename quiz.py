@@ -1,4 +1,7 @@
 # import all things needed
+import time
+import sys
+
 # class
     # construct method
         # question
