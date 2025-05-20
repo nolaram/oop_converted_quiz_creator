@@ -50,6 +50,31 @@ class QuizCreatorApp:
                 if event.type == pygame.QUIT:
                     running = False
 
+                elif event.type == pygame.KEYDOWN:
+                    if self.state == "input":
+                        if event.key == pygame.K_TAB:
+                            self.active_index = (self.active_index + 1) % len(self.input_boxes)
+                        elif event.key == pygame.K_RETURN:
+                            inputs = [box.text for box in self.input_boxes]
+                            if all(inputs) and inputs[5].lower() in ["a", "b", "c", "d"]:
+                                self.writer.save(inputs)
+                                for box in self.input_boxes:
+                                    box.text = ""
+                                self.state = "confirm"
+                            else:
+                                print("Fill all fields properly and ensure correct answer is a/b/c/d.")
+                        else:
+                            self.input_boxes[self.active_index].handle_event(event)
+
+                    elif self.state == "confirm":
+                        if event.key == pygame.K_y:
+                            for box in self.input_boxes:
+                                box.text = ""
+                            self.active_index = 0
+                            self.state = "input"
+                        elif event.key == pygame.K_n:
+                            running = False
+
             self.screen.fill((0, 0, 0))
             pygame.display.flip()
             self.clock.tick(30)
