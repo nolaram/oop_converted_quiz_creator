@@ -52,3 +52,7 @@ class Quiz:
 
             if user_answer not in ['a', 'b', 'c', 'd']:
                 print("Please enter a valid choice: a, b, c, or d")
+
+        if question.is_correct(user_answer):
+            print("Correct!")
+            self.score += 1
