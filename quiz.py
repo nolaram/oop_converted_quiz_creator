@@ -46,3 +46,5 @@ class Quiz:
                 print("\nTime's up!")
                 print(f"The correct answer was '{question.correct_answer}'.")
                 return
+            
+            print(f"Time remaining: {remaining} seconds")
