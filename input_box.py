@@ -19,3 +19,7 @@ class InputBox:
                 self.text += event.unicode
 
     # method draw
+    def draw(self, screen, active_color, inactive_color, text_color):
+        color = active_color if self.active else inactive_color
+        pygame.draw.rect(screen, color, self.rect, 0)
+        pygame.draw.rect(screen, pygame.Color("white"), self.rect, 2)
